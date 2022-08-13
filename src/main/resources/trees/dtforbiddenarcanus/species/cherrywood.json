@@ -16,15 +16,5 @@
         "fruit": "dtforbiddenarcanus:cherry"
       }
     }
-  ],
-  "_drop_creators": [
-    "log",
-    "stick",
-    {
-      "name": "fruit",
-      "properties": {
-        "fruit_item": "forbidden_arcanus:cherry_peach"
-      }
-    }
   ]
 }
