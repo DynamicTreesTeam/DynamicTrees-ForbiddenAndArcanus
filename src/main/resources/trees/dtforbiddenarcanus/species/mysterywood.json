@@ -6,17 +6,20 @@
   "leaves_properties": "dtforbiddenarcanus:mysterywood",
   "perfect_biomes": { "name": "flower_forest" },
   "primitive_sapling": "forbidden_arcanus:mysterywood_sapling",
+  "fruits": [
+    "dtforbiddenarcanus:golden_apple"
+  ],
   "features" : [
     {
       "name": "fruit",
       "properties": {
-        "fruit_block": "dtforbiddenarcanus:golden_apple_fruit",
+        "fruit": "dtforbiddenarcanus:golden_apple",
         "quantity": 1,
         "place_chance": 0.01
       }
     }
   ],
-  "drop_creators": [
+  "_drop_creators": [
     "log",
     "stick",
     "seed",

@@ -6,15 +6,18 @@
   "leaves_properties": "dtforbiddenarcanus:cherrywood",
   "perfect_biomes": { "types": [ "plains", "overworld" ] },
   "primitive_sapling": "forbidden_arcanus:cherrywood_sapling",
+  "fruits": [
+    "dtforbiddenarcanus:cherry"
+  ],
   "features" : [
     {
       "name": "fruit",
       "properties": {
-        "fruit_block": "dtforbiddenarcanus:cherry_fruit"
+        "fruit": "dtforbiddenarcanus:cherry"
       }
     }
   ],
-  "drop_creators": [
+  "_drop_creators": [
     "log",
     "stick",
     {
