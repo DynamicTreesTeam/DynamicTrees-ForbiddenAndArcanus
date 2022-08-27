@@ -38,12 +38,12 @@ public class MysterywoodFamily extends Family {
     }
 
     @Override
-    protected BranchBlock createBranchBlock() {
-        BasicBranchBlock branch = this.isThick() ? new ThickBranchBlock(this.getProperties()){
+    protected BranchBlock createBranchBlock(ResourceLocation name) {
+        BasicBranchBlock branch = this.isThick() ? new ThickBranchBlock(name, this.getProperties()){
             @Override public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
                 branchAnimateTick(stateIn, worldIn, pos, rand);
             }
-        } : new BasicBranchBlock(this.getProperties()){
+        } : new BasicBranchBlock(name, this.getProperties()){
             @Override public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
                 branchAnimateTick(stateIn, worldIn, pos, rand);
             }
