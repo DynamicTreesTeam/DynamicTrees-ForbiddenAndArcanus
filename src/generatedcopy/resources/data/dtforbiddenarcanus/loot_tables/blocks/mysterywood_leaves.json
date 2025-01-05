@@ -2,8 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -17,9 +16,7 @@
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
-                        "items": [
-                          "minecraft:shears"
-                        ]
+                        "item": "minecraft:shears"
                       }
                     },
                     {
@@ -38,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "forbidden_arcanus:cherrywood_leaves"
+              "name": "forbidden_arcanus:mysterywood_leaves"
             },
             {
               "type": "dynamictrees:seed_item",
@@ -66,8 +63,7 @@
       ]
     },
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
@@ -88,11 +84,10 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
                 "min": 1.0,
-                "max": 2.0
-              },
-              "add": false
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              }
             },
             {
               "function": "minecraft:explosion_decay"
@@ -110,9 +105,7 @@
               {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "items": [
-                    "minecraft:shears"
-                  ]
+                  "item": "minecraft:shears"
                 }
               },
               {
