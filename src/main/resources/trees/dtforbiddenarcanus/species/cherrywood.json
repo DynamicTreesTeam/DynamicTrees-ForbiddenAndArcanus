@@ -5,7 +5,7 @@
   "growth_rate": 0.8,
   "leaves_properties": "dtforbiddenarcanus:cherrywood",
   "perfect_biomes": { "types": [ "plains", "overworld" ] },
-  "primitive_sapling": "forbidden_arcanus:cherrywood_sapling",
+  "primitive_sapling": "forbidden_arcanus:cherry_sapling",
   "fruits": [
     "dtforbiddenarcanus:cherry"
   ],

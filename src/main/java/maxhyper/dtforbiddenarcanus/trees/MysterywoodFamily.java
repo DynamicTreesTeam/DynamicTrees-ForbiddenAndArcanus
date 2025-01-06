@@ -40,11 +40,11 @@ public class MysterywoodFamily extends Family {
     @Override
     protected BranchBlock createBranchBlock(ResourceLocation name) {
         BasicBranchBlock branch = this.isThick() ? new ThickBranchBlock(name, this.getProperties()){
-            @Override public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, Random rand) {
+            public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, Random rand) {
                 branchAnimateTick(stateIn, worldIn, pos, rand);
             }
         } : new BasicBranchBlock(name, this.getProperties()){
-            @Override public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, Random rand) {
+            public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, Random rand) {
                 branchAnimateTick(stateIn, worldIn, pos, rand);
             }
         };
