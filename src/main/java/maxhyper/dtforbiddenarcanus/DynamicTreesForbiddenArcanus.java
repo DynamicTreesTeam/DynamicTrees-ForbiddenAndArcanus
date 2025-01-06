@@ -2,11 +2,9 @@ package maxhyper.dtforbiddenarcanus;
 
 import com.ferreusveritas.dynamictrees.api.GatherDataHelper;
 import com.ferreusveritas.dynamictrees.api.registry.RegistryHandler;
-import com.stal111.forbidden_arcanus.core.config.WorldGenConfig;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -16,18 +14,12 @@ public class DynamicTreesForbiddenArcanus {
     public static final String MOD_ID = "dtforbiddenarcanus";
 
     public DynamicTreesForbiddenArcanus() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::gatherData);
 
         MinecraftForge.EVENT_BUS.register(this);
 
         RegistryHandler.setup(MOD_ID);
-    }
-
-    private void commonSetup(final FMLCommonSetupEvent event) {
-        WorldGenConfig.CHERRYWOOD_TREE_GENERATE.set(false);
-        WorldGenConfig.MYSTERYWOOD_TREE_GENERATE.set(false);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) { }

@@ -84,13 +84,13 @@ dependencies {
     minecraft("net.minecraftforge:forge:${mcVersion}-${property("forgeVersion")}")
 
     implementation(fg.deobf("com.ferreusveritas.dynamictrees:DynamicTrees-$mcVersion:${property("dynamicTreesVersion")}"))
-    implementation(fg.deobf("curse.maven:valhelsia-core-416935:4181245"))
-    implementation(fg.deobf("curse.maven:forbidden-arcanus-309858:4852521"))
+    implementation(fg.deobf("curse.maven:valhelsia-core-416935:5189548"))
+    implementation(fg.deobf("curse.maven:forbidden-arcanus-309858:5198323"))
 
-    runtimeOnly(fg.deobf("curse.maven:jade-324717:4433884"))
-    runtimeOnly(fg.deobf("curse.maven:jei-238222:4615177"))
-    runtimeOnly(fg.deobf("org.squiddev:cc-tweaked-$mcVersion:${property("ccVersion")}"))
-    runtimeOnly(fg.deobf("com.harleyoconnor.suggestionproviderfix:SuggestionProviderFix-1.19:${property("suggestionProviderFixVersion")}"))
+    runtimeOnly(fg.deobf("curse.maven:jade-324717:5072729"))
+    runtimeOnly(fg.deobf("curse.maven:jei-238222:5101366"))
+    runtimeOnly(fg.deobf("curse.maven:cc-tweaked-282001:5118388"))
+    runtimeOnly(fg.deobf("curse.maven:suggestion-provider-fix-469647:4591193"))
 }
 
 tasks.jar {

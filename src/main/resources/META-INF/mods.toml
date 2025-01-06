@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[41,)"
+loaderVersion="[47,)"
 license="MIT"
 issueTrackerURL="https://github.com/DynamicTreesTeam/DynamicTrees-ForbiddenAndArcanus/issues"
 
@@ -19,34 +19,34 @@ Compatibility Mod between Dynamic trees and Forbidden and Arcanus
 [[dependencies.dtforbiddenarcanus]]
     modId="forge"
     mandatory=true
-    versionRange="[41,)"
+    versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.dtforbiddenarcanus]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,1.19.3)"
+    versionRange="[1.20,1.21)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.dtforbiddenarcanus]]
     modId="dynamictrees"
     mandatory=true
-    versionRange="[1.1.0-BETA1,)"
+    versionRange="[1.3.6,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.dtforbiddenarcanus]]
     modId="dynamictreesplus"
     mandatory=false
-    versionRange="[1.1.0,)"
+    versionRange="[1.2.0-BETA1,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.dtforbiddenarcanus]]
     modId="forbidden_arcanus"
     mandatory=true
-    versionRange="[1.19.2-2.1.0,)"
+    versionRange="[1.20.1-2.2.0,)"
     ordering="AFTER"
     side="BOTH"

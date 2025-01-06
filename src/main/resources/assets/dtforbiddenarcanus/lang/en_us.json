@@ -1,13 +1,9 @@
 {
-  "block.dtforbiddenarcanus.cherrywood_branch": "Cherry Tree",
   "block.dtforbiddenarcanus.mysterywood_branch": "Aurum Tree",
 
-  "block.dtforbiddenarcanus.cherrywood_leaves": "Cherry leaves",
   "block.dtforbiddenarcanus.mysterywood_leaves": "Aurum leaves",
 
-  "species.dtforbiddenarcanus.cherrywood": "Cherry",
   "species.dtforbiddenarcanus.mysterywood": "Aurum",
 
-  "item.dtforbiddenarcanus.cherrywood_seed": "Cherry Peach Pit",
   "item.dtforbiddenarcanus.mysterywood_seed": "Aurum Seed"
 }
