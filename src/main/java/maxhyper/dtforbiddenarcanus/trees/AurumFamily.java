@@ -1,0 +1,55 @@
+package maxhyper.dtforbiddenarcanus.trees;
+
+import com.ferreusveritas.dynamictrees.api.TreeHelper;
+import com.ferreusveritas.dynamictrees.api.registry.TypedRegistry;
+import com.ferreusveritas.dynamictrees.block.branch.BasicBranchBlock;
+import com.ferreusveritas.dynamictrees.block.branch.BranchBlock;
+import com.ferreusveritas.dynamictrees.block.branch.ThickBranchBlock;
+import com.ferreusveritas.dynamictrees.tree.family.Family;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+public class AurumFamily extends Family {
+    public static final TypedRegistry.EntryType<Family> TYPE = TypedRegistry.newType(AurumFamily::new);
+
+    public AurumFamily(ResourceLocation name) {
+        super(name);
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    private static void branchAnimateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
+        int radius = TreeHelper.getRadius(world, pos);
+        if (world.random.nextFloat() <= radius/16f){
+            double d0 = ((float)pos.getX() + random.nextFloat());
+            double d2 = ((float)pos.getY() + random.nextFloat());
+            double d3 = ((float)pos.getZ() + random.nextFloat());
+            double d4 = ((double)random.nextFloat() - 0.5D) * 0.3D;
+            double d5 = ((double)random.nextFloat() - 0.5D) * 0.3D;
+            double d6 = ((double)random.nextFloat() - 0.5D) * 0.3D;
+            world.addParticle(ParticleTypes.END_ROD, d0, d2, d3, d4, d5, d6);
+        }
+    }
+
+    @Override
+    protected BranchBlock createBranchBlock(ResourceLocation name) {
+        BasicBranchBlock branch = this.isThick() ? new ThickBranchBlock(name, this.getProperties()){
+            @Override
+            public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
+                branchAnimateTick(stateIn, worldIn, pos, rand);
+            }
+        } : new BasicBranchBlock(name, this.getProperties()){
+            @Override
+            public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
+                branchAnimateTick(stateIn, worldIn, pos, rand);
+            }
+        };
+        if (this.isFireProof()) branch.setFireSpreadSpeed(0).setFlammability(0);
+        return branch;
+    }
+}

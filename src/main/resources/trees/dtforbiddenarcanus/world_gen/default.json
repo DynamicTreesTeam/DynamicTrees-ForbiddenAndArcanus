@@ -1,23 +1,11 @@
 [
   {
-    "select": { "types" : [ "plains", "!savanna" ] },
-    "apply": {
-      "species" : {
-        "method" : "splice_before",
-        "random" : {
-          "dtforbiddenarcanus:cherrywood" : 1,
-          "..." : 50
-        }
-      }
-    }
-  },
-  {
     "select": { "name" : "minecraft:flower_forest" },
     "apply": {
       "species" : {
         "method" : "splice_before",
         "random" : {
-          "dtforbiddenarcanus:mysterywood" : 1,
+          "dtforbiddenarcanus:aurum" : 1,
           "..." : 40
         }
       }

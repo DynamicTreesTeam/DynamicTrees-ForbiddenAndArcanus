@@ -1,0 +1,7 @@
+{
+    "loader": "dynamictrees:branch",
+    "textures": {
+        "bark": "forbidden_arcanus:block/stripped_aurum_log",
+        "rings": "forbidden_arcanus:block/stripped_aurum_log_top"
+    }
+}
