@@ -26,7 +26,7 @@ public class MysterywoodFamily extends Family {
     @OnlyIn(Dist.CLIENT)
     private static void branchAnimateTick(BlockState state, Level world, BlockPos pos, Random random) {
         int radius = TreeHelper.getRadius(world, pos);
-        if (world.random.nextFloat() <= radius/8f){
+        if (world.random.nextFloat() <= radius/16f){
             double d0 = ((float)pos.getX() + random.nextFloat());
             double d2 = ((float)pos.getY() + random.nextFloat());
             double d3 = ((float)pos.getZ() + random.nextFloat());
