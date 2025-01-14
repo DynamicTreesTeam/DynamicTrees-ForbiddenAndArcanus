@@ -6,14 +6,14 @@ issueTrackerURL="https://github.com/DynamicTreesTeam/DynamicTrees-ForbiddenAndAr
 [[mods]]
 modId="dtforbiddenarcanus"
 version="${file.jarVersion}"
-displayName="Dynamic Trees for Forbidden and Arcanus"
+displayName="Dynamic Trees for Forbidden & Arcanus"
 updateJSONURL="https://github.com/DynamicTreesTeam/DynamicTreesVersionInfo/blob/master/Add-ons/ForbiddenAndArcanus.json?raw=true"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/dynamic-trees-forbidden-arcanus"
 logoFile=""
 credits="GroupiX05 for the 1.18.2, 1.19.2 and 1.20.1 ports"
 authors="Max Hyper"
 description='''
-Compatibility Mod between Dynamic trees and Forbidden and Arcanus
+Compatibility Mod between Dynamic trees and Forbidden & Arcanus
 '''
 
 [[dependencies.dtforbiddenarcanus]]
