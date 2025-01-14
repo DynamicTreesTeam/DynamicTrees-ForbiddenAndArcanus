@@ -1,9 +1,9 @@
 package maxhyper.dtforbiddenarcanus;
 
 import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
-import com.ferreusveritas.dynamictrees.trees.Family;
+import com.ferreusveritas.dynamictrees.tree.family.Family;
 import maxhyper.dtforbiddenarcanus.trees.MysterywoodFamily;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
