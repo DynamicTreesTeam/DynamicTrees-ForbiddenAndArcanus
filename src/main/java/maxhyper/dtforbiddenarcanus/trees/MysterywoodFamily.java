@@ -2,15 +2,16 @@ package maxhyper.dtforbiddenarcanus.trees;
 
 import com.ferreusveritas.dynamictrees.api.TreeHelper;
 import com.ferreusveritas.dynamictrees.api.registry.TypedRegistry;
-import com.ferreusveritas.dynamictrees.blocks.branches.BasicBranchBlock;
-import com.ferreusveritas.dynamictrees.blocks.branches.BranchBlock;
-import com.ferreusveritas.dynamictrees.blocks.branches.ThickBranchBlock;
-import com.ferreusveritas.dynamictrees.trees.Family;
-import net.minecraft.block.BlockState;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import com.ferreusveritas.dynamictrees.block.branch.BasicBranchBlock;
+import com.ferreusveritas.dynamictrees.block.branch.BranchBlock;
+import com.ferreusveritas.dynamictrees.block.branch.ThickBranchBlock;
+import com.ferreusveritas.dynamictrees.tree.family.Family;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -24,9 +25,9 @@ public class MysterywoodFamily extends Family {
     }
 
     @OnlyIn(Dist.CLIENT)
-    private static void branchAnimateTick(BlockState state, World world, BlockPos pos, Random random) {
+    private static void branchAnimateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
         int radius = TreeHelper.getRadius(world, pos);
-        if (world.rand.nextFloat() <= radius/8f){
+        if (world.random.nextFloat() <= radius/16f){
             double d0 = ((float)pos.getX() + random.nextFloat());
             double d2 = ((float)pos.getY() + random.nextFloat());
             double d3 = ((float)pos.getZ() + random.nextFloat());
@@ -40,12 +41,14 @@ public class MysterywoodFamily extends Family {
     @Override
     protected BranchBlock createBranchBlock(ResourceLocation name) {
         BasicBranchBlock branch = this.isThick() ? new ThickBranchBlock(name, this.getProperties()){
-            @Override public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-                branchAnimateTick(stateIn, worldIn, pos, rand);
+            @Override
+            public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+                branchAnimateTick(pState, pLevel, pPos, pRandom);
             }
         } : new BasicBranchBlock(name, this.getProperties()){
-            @Override public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-                branchAnimateTick(stateIn, worldIn, pos, rand);
+            @Override
+            public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+                branchAnimateTick(pState, pLevel, pPos, pRandom);
             }
         };
         if (this.isFireProof()) branch.setFireSpreadSpeed(0).setFlammability(0);

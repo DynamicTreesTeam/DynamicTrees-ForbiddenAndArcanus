@@ -5,7 +5,7 @@
   "growth_rate": 0.8,
   "leaves_properties": "dtforbiddenarcanus:mysterywood",
   "perfect_biomes": { "name": "flower_forest" },
-  "primitive_sapling": "forbidden_arcanus:mysterywood_sapling",
+  "primitive_sapling": "forbidden_arcanus:aurum_sapling",
   "drop_seeds": true,
   "fruits": [
     "dtforbiddenarcanus:golden_apple"
