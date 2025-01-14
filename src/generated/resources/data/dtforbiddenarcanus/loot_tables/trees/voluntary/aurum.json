@@ -12,11 +12,11 @@
               "rarity": 1.0
             }
           ],
-          "name": "dtforbiddenarcanus:mysterywood_seed"
+          "name": "dtforbiddenarcanus:aurum_seed"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "dtforbiddenarcanus:trees/voluntary/mysterywood"
+  "random_sequence": "dtforbiddenarcanus:trees/voluntary/aurum"
 }

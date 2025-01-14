@@ -1,9 +1,9 @@
 {
-  "block.dtforbiddenarcanus.mysterywood_branch": "Aurum Tree",
+  "block.dtforbiddenarcanus.aurum_branch": "Aurum Tree",
 
-  "block.dtforbiddenarcanus.mysterywood_leaves": "Aurum leaves",
+  "block.dtforbiddenarcanus.aurum_leaves": "Aurum leaves",
 
-  "species.dtforbiddenarcanus.mysterywood": "Aurum",
+  "species.dtforbiddenarcanus.aurum": "Aurum",
 
-  "item.dtforbiddenarcanus.mysterywood_seed": "Aurum Seed"
+  "item.dtforbiddenarcanus.aurum_seed": "Aurum Seed"
 }

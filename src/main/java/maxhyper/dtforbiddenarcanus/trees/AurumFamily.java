@@ -15,10 +15,10 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class MysterywoodFamily extends Family {
-    public static final TypedRegistry.EntryType<Family> TYPE = TypedRegistry.newType(MysterywoodFamily::new);
+public class AurumFamily extends Family {
+    public static final TypedRegistry.EntryType<Family> TYPE = TypedRegistry.newType(AurumFamily::new);
 
-    public MysterywoodFamily(ResourceLocation name) {
+    public AurumFamily(ResourceLocation name) {
         super(name);
     }
 

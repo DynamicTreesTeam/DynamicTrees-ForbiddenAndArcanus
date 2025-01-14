@@ -5,7 +5,7 @@
       "species" : {
         "method" : "splice_before",
         "random" : {
-          "dtforbiddenarcanus:mysterywood" : 1,
+          "dtforbiddenarcanus:aurum" : 1,
           "..." : 40
         }
       }
