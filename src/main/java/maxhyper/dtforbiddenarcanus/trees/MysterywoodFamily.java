@@ -6,6 +6,7 @@ import com.ferreusveritas.dynamictrees.block.branch.BasicBranchBlock;
 import com.ferreusveritas.dynamictrees.block.branch.BranchBlock;
 import com.ferreusveritas.dynamictrees.block.branch.ThickBranchBlock;
 import com.ferreusveritas.dynamictrees.tree.family.Family;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
@@ -24,9 +25,9 @@ public class MysterywoodFamily extends Family {
     }
 
     @OnlyIn(Dist.CLIENT)
-    private static void branchAnimateTick(BlockState state, Level world, BlockPos pos, Random random) {
+    private static void branchAnimateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
         int radius = TreeHelper.getRadius(world, pos);
-        if (world.random.nextFloat() <= radius/8f){
+        if (world.random.nextFloat() <= radius/16f){
             double d0 = ((float)pos.getX() + random.nextFloat());
             double d2 = ((float)pos.getY() + random.nextFloat());
             double d3 = ((float)pos.getZ() + random.nextFloat());
@@ -40,12 +41,14 @@ public class MysterywoodFamily extends Family {
     @Override
     protected BranchBlock createBranchBlock(ResourceLocation name) {
         BasicBranchBlock branch = this.isThick() ? new ThickBranchBlock(name, this.getProperties()){
-            public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, Random rand) {
-                branchAnimateTick(stateIn, worldIn, pos, rand);
+            @Override
+            public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+                branchAnimateTick(pState, pLevel, pPos, pRandom);
             }
         } : new BasicBranchBlock(name, this.getProperties()){
-            public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, Random rand) {
-                branchAnimateTick(stateIn, worldIn, pos, rand);
+            @Override
+            public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+                branchAnimateTick(pState, pLevel, pPos, pRandom);
             }
         };
         if (this.isFireProof()) branch.setFireSpreadSpeed(0).setFlammability(0);

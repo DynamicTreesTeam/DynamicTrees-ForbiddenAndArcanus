@@ -8,7 +8,7 @@
         "method" : "splice_before",
         "random" : {
           "dtforbiddenarcanus:cherrywood" : 1,
-          "..." : 50
+          "..." : 30
         }
       }
     }
