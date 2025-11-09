@@ -1,25 +1,24 @@
 package maxhyper.dtforbiddenarcanus;
 
-import com.ferreusveritas.dynamictrees.api.GatherDataHelper;
-import com.ferreusveritas.dynamictrees.api.registry.RegistryHandler;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import com.dtteam.dynamictrees.data.GatherDataHelper;
+import com.dtteam.dynamictrees.registry.NeoForgeRegistryHandler;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DynamicTreesForbiddenArcanus.MOD_ID)
 public class DynamicTreesForbiddenArcanus {
     public static final String MOD_ID = "dtforbiddenarcanus";
 
-    public DynamicTreesForbiddenArcanus() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::gatherData);
+    public DynamicTreesForbiddenArcanus(IEventBus bus, ModContainer modContainer) {
+        bus.addListener(this::clientSetup);
+        bus.addListener(this::gatherData);
 
-        MinecraftForge.EVENT_BUS.register(this);
 
-        RegistryHandler.setup(MOD_ID);
+        NeoForgeRegistryHandler.setup(MOD_ID, bus);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) { }

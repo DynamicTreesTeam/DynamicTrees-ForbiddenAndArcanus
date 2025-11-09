@@ -1,18 +1,17 @@
 package maxhyper.dtforbiddenarcanus;
 
-import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
-import com.ferreusveritas.dynamictrees.tree.family.Family;
+import com.dtteam.dynamictrees.event.TypeRegistryEvent;
+import com.dtteam.dynamictrees.tree.family.Family;
 import maxhyper.dtforbiddenarcanus.trees.AurumFamily;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 
-@Mod.EventBusSubscriber(modid = DynamicTreesForbiddenArcanus.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class DTForbiddenArcanusRegistries {
 
     @SubscribeEvent
     public static void registerFamilyTypes(TypeRegistryEvent<Family> event) {
-        event.registerType(new ResourceLocation(DynamicTreesForbiddenArcanus.MOD_ID, "aurum"), AurumFamily.TYPE);
+        event.registerType(ResourceLocation.fromNamespaceAndPath(DynamicTreesForbiddenArcanus.MOD_ID, "aurum"), AurumFamily.TYPE);
     }
-
 }
